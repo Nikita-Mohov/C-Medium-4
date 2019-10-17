@@ -1,0 +1,11 @@
+C:\Users\Comp102\source\repos\Medium4.3\Medium4.3\bin\Debug\netcoreapp3.0\Medium4.3.exe
+C:\Users\Comp102\source\repos\Medium4.3\Medium4.3\bin\Debug\netcoreapp3.0\Medium4.3.deps.json
+C:\Users\Comp102\source\repos\Medium4.3\Medium4.3\bin\Debug\netcoreapp3.0\Medium4.3.runtimeconfig.json
+C:\Users\Comp102\source\repos\Medium4.3\Medium4.3\bin\Debug\netcoreapp3.0\Medium4.3.runtimeconfig.dev.json
+C:\Users\Comp102\source\repos\Medium4.3\Medium4.3\bin\Debug\netcoreapp3.0\Medium4.3.dll
+C:\Users\Comp102\source\repos\Medium4.3\Medium4.3\bin\Debug\netcoreapp3.0\Medium4.3.pdb
+C:\Users\Comp102\source\repos\Medium4.3\Medium4.3\obj\Debug\netcoreapp3.0\Medium4.3.csprojAssemblyReference.cache
+C:\Users\Comp102\source\repos\Medium4.3\Medium4.3\obj\Debug\netcoreapp3.0\Medium4.3.AssemblyInfoInputs.cache
+C:\Users\Comp102\source\repos\Medium4.3\Medium4.3\obj\Debug\netcoreapp3.0\Medium4.3.AssemblyInfo.cs
+C:\Users\Comp102\source\repos\Medium4.3\Medium4.3\obj\Debug\netcoreapp3.0\Medium4.3.dll
+C:\Users\Comp102\source\repos\Medium4.3\Medium4.3\obj\Debug\netcoreapp3.0\Medium4.3.pdb
