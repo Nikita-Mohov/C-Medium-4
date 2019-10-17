@@ -7,33 +7,75 @@ namespace Lesson
     {
         static void Main(string[] args)
         {
-
+            var secureConsoleSender = new Sender(new SecureLog(new ConsoleLog()));
+            var fileSender = new Sender(new FileLog());
+            var secureFileSender = new Sender(new SecureLog(new FileLog()));
+            var consoleFileSender = new Sender(new ConsoleLog(new FileLog()));
+            var secureConsoleFileSender = new Sender(new SecureLog(new ConsoleLog(new FileLog())));
         }
     }
 
-    class ConsoleLogWritter
+    class Sender
     {
-        public virtual void WriteError(string message)
+        private ILogger _log;
+
+        public Sender(ILogger log)
         {
-            Console.WriteLine(message);
+            _log = log;
         }
     }
 
-    class FileLogWritter
+    interface ILogger
     {
-        public virtual void WriteError(string message)
+        void WriteMessage(string message);
+    }
+
+    class ConsoleLog : ILogger
+    {
+        private ILogger _log;
+
+        public ConsoleLog(ILogger log)
         {
-            File.WriteAllText("log.txt", message);
+            _log = log;
+        }
+        public ConsoleLog() { }
+
+        public void WriteMessage(string message)
+        {
+            Console.WriteLine($"[{DateTime.Now}] : {message}");
         }
     }
 
-    class SecureConsoleLogWritter : ConsoleLogWritter
+    class FileLog: ILogger
     {
-        public override void WriteError(string message)
+        private ILogger _log;
+
+        public FileLog(ILogger log)
+        {
+            _log = log;
+        }
+        public FileLog() { }
+
+        public void WriteMessage(string message)
+        {
+            File.WriteAllText("log.txt", $"[{DateTime.Now}] : {message}");
+        }
+    }
+
+    class SecureLog : ILogger
+    {
+        private ILogger _logger;
+
+        SecureLog(ILogger logger)
+        {
+            _logger = logger;
+        }
+
+        public void WriteError(string message)
         {
             if (DateTime.Now.DayOfWeek == DayOfWeek.Friday)
             {
-                base.WriteError(message);
+                _logger.WriteMessage(message);
             }
         }
     }
